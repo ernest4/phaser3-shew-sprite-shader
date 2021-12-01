@@ -10,7 +10,7 @@ The shader itself just provides the skew, to fake shadows you'll need to somethi
 ```javascript
 export default class Test extends Phaser.Scene {
   create() {
-    this.renderer.pipelines.add("skewQuad", new SkewQuadPipeline(this.game));
+    this.renderer.pipelines.add("skewQuad", new SkewQuad(this.game));
 
     // NOTE: there's perf penalty to using containers. So in your own implementation might be better to manually track
     // position of shadow sprite perhaps?
